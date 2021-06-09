@@ -57,7 +57,6 @@ node server.js
 
 ## Links
  
-  * Application Walk-Through: (https://www.loom.com/share/41988f8c1fcb49ecb24cae95ef1fbd9c)
   * Github Repository URL: (https://github.com/samohtebag/Fitness-Tracker)
   * Heroku Deployed App: https://polar-chamber-22048.herokuapp.com/
   
