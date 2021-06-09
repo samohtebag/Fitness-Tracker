@@ -47,7 +47,7 @@ router.put("/api/workouts/:id", ({body, params}, res) => {
   });
 });
 
-//Post
+
 router.post("/api/workouts", ({ body }, res) => {
 
   workoutModel.create(body)
