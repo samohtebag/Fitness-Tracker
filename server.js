@@ -12,17 +12,18 @@ app.use(express.urlencoded({
 }));
 
 app.use(express.json());
+
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/polar-chamber-22048", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false
 });
 
-require("./routes/htmlroutes")(app);
-require("./routes/apiroutes")(app);
+app.use(require("./routes/htmlroutes"));
+app.use(require("./routes/apiroutes"));
 
 app.listen(PORT, () => {
   console.log(`Now running on this port: ${PORT}!`);
