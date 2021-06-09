@@ -33,7 +33,6 @@ router.get("/api/workouts/range", (req, res) => {
     });
 });
 
-//Put
 router.put("/api/workouts/:id", ({body, params}, res) => {
 
   workoutModel.findByIdAndUpdate(params.id, {
@@ -46,7 +45,6 @@ router.put("/api/workouts/:id", ({body, params}, res) => {
     res.json(err);
   });
 });
-
 
 router.post("/api/workouts", ({ body }, res) => {
 
